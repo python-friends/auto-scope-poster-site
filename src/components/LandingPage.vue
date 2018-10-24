@@ -45,7 +45,7 @@
                     <v-card-text>
                       Auto-scope can generate images that are gigapixels in size. The links below provide easy interaction with these large files using mapping technology.
                     </v-card-text>
-                    <v-btn dark class="green" :to="{ name: 'scans', params: { id: 1 }}">400x (200 tiles)</v-btn>
+                    <v-btn dark class="green" :to="{ name: 'scans', params: { id: 2 }}">400x (200 tiles)</v-btn>
                     <v-btn dark class="blue">100x (full slide)</v-btn>
                   </v-card>
                 </v-flex>
