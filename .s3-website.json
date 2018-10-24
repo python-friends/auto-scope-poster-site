@@ -1,0 +1,13 @@
+{
+   "index": "index.html",
+   "region": "ap-southeast-2",
+   "uploadDir": "dist/",
+   "prefix": "",
+   "exclude": [],
+   "corsConfiguration": [],
+   "enableCloudfront": false,
+   "retries": 20,
+   "deploy": true,
+   "domain": "auto-scope-poster.python-friends.com",
+   "configFile": ".s3-website.json"
+}
