@@ -25,17 +25,14 @@ let router = new Router({
     {
       path: '/404',
       name: '404',
+      alias: '*', 
       component: NotFound 
-    }
+    },
+    { 
+      path: '*',
+      redirect: '/404'
+    }, 
   ]
 })
-
-router.beforeEach((to, from, next) => {
-  if (!to.matched.length) {
-    next({name: '404'});
-  } else {
-    next();
-  }
-});
 
 export default router

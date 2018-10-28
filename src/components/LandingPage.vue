@@ -43,10 +43,9 @@
                       <div class="headline text-xs-center">Slide Scans</div>
                     </v-card-title>
                     <v-card-text>
-                      Auto-scope can generate images that are gigapixels in size. The links below provide easy interaction with these large files using mapping technology.
+                      Auto-scope can generate images that are gigapixels in size. The link below provide easy interaction with these large files using mapping technology.
                     </v-card-text>
                     <v-btn dark class="green" :to="{ name: 'scans', params: { id: 2 }}">400x (200 tiles)</v-btn>
-                    <v-btn dark class="blue">100x (full slide)</v-btn>
                   </v-card>
                 </v-flex>
                 <v-flex xs12 md4>
@@ -60,7 +59,7 @@
                     <v-card-text>
                       Auto-scope is completely open source, the code used in this project is found on Github (link below). The project is under active development.
                     </v-card-text>
-                     <v-btn dark href="https://github.com/python-friends/auto-scope">Code</v-btn>
+                     <v-btn dark target=”_blank” href="https://github.com/python-friends/auto-scope">Code</v-btn>
                   </v-card>
                 </v-flex>
                 <v-flex xs12 md4>
@@ -72,9 +71,9 @@
                       <div class="headline text-xs-center">3D printer models</div>
                     </v-card-title>
                     <v-card-text>
-                      The 3D models used in this project are freely avaiable on the 3D model sharing platform, Thingiverse. 
+                      The 3D models used in this project are freely avaiable on the digital design sharing platform, Thingiverse. 
                     </v-card-text>
-                    <v-btn dark color="blue-grey">Models</v-btn>
+                    <v-btn dark target=”_blank” href="https://www.thingiverse.com/thing:3182595" color="blue-grey">Models</v-btn>
                   </v-card>
                 </v-flex>
               </v-layout>

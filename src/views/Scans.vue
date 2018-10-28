@@ -8,6 +8,15 @@
     indeterminate
   ></v-progress-circular>
   </v-container>
+  <v-responsive v-else-if="error" color="primary" dark>
+    <v-container fill-height>
+      <v-layout align-center>
+        <v-flex text-xs-center>
+          <h3 class="display-3">Scan with ID {{scanID}} not found.</h3>
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </v-responsive>
   <div v-else>
     <Scan 
       :width="width"
@@ -16,7 +25,6 @@
       :maxZoom="maxZoom"
       :minZoom="minZoom"
     />
-
   </div>
 </div>
 </template>
@@ -35,7 +43,8 @@
         minZoom: null,
         maxZoom: null,
         scanID: Number(this.$route.params.id),
-        loading: true
+        loading: true,
+        error: false
       }
     },
     mounted() {
@@ -55,8 +64,11 @@
           this.height = Math.max(Math.abs(Number(BoundingBox.miny)), BoundingBox.maxy)
           this.loading = false
         })
-        .catch(function (error) {
+        .catch(error => {
           console.log(error);
+          this.loading = false
+          this.error = true
+          //this.$router.push('/404')
       });   
     }
   }
